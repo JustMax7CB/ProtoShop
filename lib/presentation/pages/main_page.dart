@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:protoshop/presentation/components/base_page.dart';
 import 'package:protoshop/presentation/components/input_field.dart';
 import 'package:protoshop/resources/resources.dart';
+import 'package:protoshop/resources/strings.dart';
 import 'package:protoshop/theme/text_styles.dart';
 
 class MainPage extends StatelessWidget {
@@ -28,7 +29,7 @@ class MainPage extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               child: InputField(
                 controller: controller,
-                hintText: "Search...",
+                hintText: Strings.search,
                 suffixIcon: SvgPicture.asset(
                   Svgs.search,
                   fit: BoxFit.scaleDown,

@@ -6,6 +6,7 @@ import 'package:protoshop/presentation/components/divider.dart';
 import 'package:protoshop/presentation/components/elevated_btn_w_shadow.dart';
 import 'package:protoshop/presentation/components/input_field.dart';
 import 'package:protoshop/resources/resources.dart';
+import 'package:protoshop/resources/strings.dart';
 import 'package:protoshop/theme/text_styles.dart';
 
 class LoginPage extends StatelessWidget {
@@ -29,7 +30,7 @@ class LoginPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 30.0),
-              child: Text("Login", style: subtitleStyle),
+              child: Text(Strings.loginTitle, style: subtitleStyle),
             ),
             SizedBox(
               height: (inputFieldHeight * 2) + 12,
@@ -39,12 +40,12 @@ class LoginPage extends StatelessWidget {
                   InputField(
                     keyboardType: TextInputType.emailAddress,
                     controller: emailController,
-                    hintText: "Email or phone number",
+                    hintText: Strings.emailLoginHint,
                   ),
                   InputField(
                     controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
-                    hintText: "Enter password",
+                    hintText: Strings.passwordHint,
                     obscure: true,
                     suffixIcon: IconButton(
                       icon: SvgPicture.asset(
@@ -61,11 +62,11 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CheckboxAction(
-                    label: "Remember Me", onChanged: (value) {}, value: false),
+                    label: Strings.rememberMe, onChanged: (value) {}, value: false),
                 TextButton(
                     onPressed: () {},
                     child: Text(
-                      "Forgot Password?",
+                      Strings.forgetPassword,
                       style: textBtnStyle,
                     ))
               ],
@@ -75,7 +76,7 @@ class LoginPage extends StatelessWidget {
                 await Navigator.popAndPushNamed(context, "/main");
               },
               content: Text(
-                "Sign In",
+                Strings.signInBtn,
                 style: btnTextStyle,
               ),
               height: 40,
@@ -89,7 +90,7 @@ class LoginPage extends StatelessWidget {
                 children: [
                   SvgPicture.asset(Svgs.googleLogoIcon),
                   Text(
-                    "or Sign in with Google",
+                    Strings.googleSignInBtn,
                     style: btnTextStyle,
                   ),
                 ],
@@ -102,7 +103,7 @@ class LoginPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "Don't have an account?",
+                  Strings.dontHaveAccount,
                   style: btnTextStyle,
                 ),
                 TextButton(
@@ -110,7 +111,7 @@ class LoginPage extends StatelessWidget {
                       await Navigator.pushNamed(context, "/register");
                     },
                     child: Text(
-                      "Sign up now",
+                      Strings.signUpNow,
                       style: textBtnStyle,
                     ))
               ],

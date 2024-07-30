@@ -31,7 +31,7 @@ final textBtnStyle = poppinsStyle.copyWith(
     color: textBtnColor);
 
 final termsTextStyle = poppinsStyle.copyWith(
-    fontSize: 10,
+    fontSize: 11,
     letterSpacing: 0.3,
     fontWeight: FontWeight.w400,
     color: termsColor.withOpacity(0.55));
