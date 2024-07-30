@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:protoshop/presentation/components/base_page.dart';
 import 'package:protoshop/presentation/components/input_field.dart';
+import 'package:protoshop/presentation/components/navbar.dart';
 import 'package:protoshop/resources/resources.dart';
 import 'package:protoshop/resources/strings.dart';
 import 'package:protoshop/theme/text_styles.dart';
@@ -14,6 +15,7 @@ class MainPage extends StatelessWidget {
     final controller = TextEditingController();
 
     return BasePage(
+        bottomNavBar: const MyNavbar(),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -38,7 +40,7 @@ class MainPage extends StatelessWidget {
             )),
             InkWell(
               onTap: () {
-                Navigator.popAndPushNamed(context,"/login");
+                Navigator.popAndPushNamed(context, "/login");
               },
               child: SvgPicture.asset(
                 Svgs.logoutIcon,

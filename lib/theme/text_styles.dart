@@ -42,3 +42,13 @@ final categoryTextStyle = poppinsStyle.copyWith(
   letterSpacing: 0.5,
   color: titleColor,
 );
+
+final navbarActiveItemLabelStyle = poppinsStyle.copyWith(
+  fontSize: 11,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);
+
+final navbarInactiveItemLabelStyle = navbarActiveItemLabelStyle.copyWith(
+  color: Colors.black.withOpacity(0.3),
+);

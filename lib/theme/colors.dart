@@ -17,3 +17,9 @@ const btnStrokeColor = Color(0xFF061845);
 const textBtnColor = Color(0xFF007AFF);
 const dividerColor = Color(0xFFE5E5E5);
 const termsColor = Color(0xFF1A1A1A);
+
+const navbarBgColor = Color(0xFFC4C5C8);
+final navbarShadowColor = Color(0xFF000000).withOpacity(0.37);
+
+const navbarItemActiveColor = Colors.black;
+final navbarItemInactiveColor = Colors.black.withOpacity(0.3);
