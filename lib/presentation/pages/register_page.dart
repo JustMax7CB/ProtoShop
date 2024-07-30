@@ -4,6 +4,7 @@ import 'package:protoshop/presentation/components/base_page.dart';
 import 'package:protoshop/presentation/components/elevated_btn_w_shadow.dart';
 import 'package:protoshop/presentation/components/input_field.dart';
 import 'package:protoshop/resources/resources.dart';
+import 'package:protoshop/resources/strings.dart';
 import 'package:protoshop/theme/text_styles.dart';
 
 class RegisterPage extends StatelessWidget {
@@ -29,7 +30,7 @@ class RegisterPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 30.0),
-              child: Text("Register", style: subtitleStyle),
+              child: Text(Strings.registerTitle, style: subtitleStyle),
             ),
             SizedBox(
               height: (inputFieldHeight * 4) + 24,
@@ -39,17 +40,17 @@ class RegisterPage extends StatelessWidget {
                   InputField(
                     keyboardType: TextInputType.emailAddress,
                     controller: emailController,
-                    hintText: "Enter you email",
+                    hintText: Strings.emailRegisterHint,
                   ),
                   InputField(
                     keyboardType: TextInputType.name,
                     controller: nameController,
-                    hintText: "Enter your full name",
+                    hintText: Strings.fullNameHint,
                   ),
                   InputField(
                     controller: passwordController,
                     keyboardType: TextInputType.visiblePassword,
-                    hintText: "Enter password",
+                    hintText: Strings.passwordHint,
                     obscure: true,
                     suffixIcon: IconButton(
                       icon: SvgPicture.asset(
@@ -62,7 +63,7 @@ class RegisterPage extends StatelessWidget {
                   InputField(
                     controller: confirmPasswordController,
                     keyboardType: TextInputType.visiblePassword,
-                    hintText: "Enter password to confirm",
+                    hintText: Strings.passwordConfirm,
                     obscure: true,
                     suffixIcon: IconButton(
                       icon: SvgPicture.asset(
@@ -82,7 +83,7 @@ class RegisterPage extends StatelessWidget {
                   await Navigator.popAndPushNamed(context, "/");
                 },
                 content: Text(
-                  "Sign Up",
+                  Strings.signUpBtn,
                   style: btnTextStyle,
                 ),
                 height: 40,
@@ -90,9 +91,9 @@ class RegisterPage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 50.0),
+              padding: const EdgeInsets.only(bottom: 50.0,left: 20,right: 20),
               child: Text(
-                "By signing up, you agree to our Terms of Use\nand Privacy Policy",
+                Strings.agreeToTerms,
                 textAlign: TextAlign.center,
                 style: termsTextStyle,
               ),
@@ -102,7 +103,7 @@ class RegisterPage extends StatelessWidget {
                 Navigator.pop(context);
               },
               content: Text(
-                "Back",
+                Strings.back,
                 style: btnTextStyle,
               ),
               height: 40,
