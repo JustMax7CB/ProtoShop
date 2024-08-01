@@ -52,3 +52,58 @@ final navbarActiveItemLabelStyle = poppinsStyle.copyWith(
 final navbarInactiveItemLabelStyle = navbarActiveItemLabelStyle.copyWith(
   color: Colors.black.withOpacity(0.3),
 );
+
+final productLabelStyle = poppinsStyle.copyWith(
+  fontSize: 13,
+  color: titleColor,
+  fontWeight: FontWeight.w400,
+);
+
+final productPriceStyle = productLabelStyle.copyWith(
+  fontSize: 12,
+);
+
+final productDescriptionStyle = poppinsStyle.copyWith(
+  fontSize: 24,
+  letterSpacing: -0.4,
+  color: titleColor,
+  fontWeight: FontWeight.w300,
+);
+
+final productMainPriceStyle = poppinsStyle.copyWith(
+  fontSize: 24,
+  fontWeight: FontWeight.w500,
+  color: titleColor,
+);
+
+final productMainTitleStyle = poppinsStyle.copyWith(
+  fontSize: 32,
+  fontWeight: FontWeight.w400,
+  color: titleColor,
+);
+
+final productBuyNowStyle = poppinsStyle.copyWith(
+  fontSize: 15,
+  fontWeight: FontWeight.w500,
+  letterSpacing: 0.12,
+  color: Colors.black,
+);
+
+final favoriteProductName = poppinsStyle.copyWith(
+  fontSize: 18,
+  fontWeight: FontWeight.w400,
+  color: titleColor,
+);
+
+final favoriteProductDescriptionStyle = poppinsStyle.copyWith(
+  fontSize: 14,
+  letterSpacing: -0.4,
+  color: titleColor,
+  fontWeight: FontWeight.w300,
+);
+
+final favoriteAddToCartStyle = poppinsStyle.copyWith(
+  fontSize: 6,
+  fontWeight: FontWeight.w500,
+  color: Colors.black,
+);

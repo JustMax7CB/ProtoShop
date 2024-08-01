@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:protoshop/presentation/pages/category_page.dart';
 import 'package:protoshop/presentation/pages/login_page.dart';
 import 'package:protoshop/presentation/pages/main_page.dart';
 import 'package:protoshop/presentation/pages/register_page.dart';
@@ -14,11 +15,12 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/main",
+      initialRoute: "/category",
       routes: {
         "/main": (context) => const MainPage(),
         "/login": (context) => const LoginPage(),
-        "/register": (context) => const RegisterPage()
+        "/register": (context) => const RegisterPage(),
+        "/category": (context) => const CategoryPage(title: "Bags")
       },
     );
   }

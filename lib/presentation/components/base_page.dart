@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:protoshop/presentation/components/CustomAppBar.dart';
+import 'package:protoshop/presentation/components/custom_app_bar.dart';
 import 'package:protoshop/theme/colors.dart';
 
 class BasePage extends StatelessWidget {
@@ -14,7 +14,7 @@ class BasePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bodyBgColor,
-      extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: false,
       resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(title: title),
       body: body,

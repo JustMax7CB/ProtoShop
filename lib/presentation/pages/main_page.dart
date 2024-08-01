@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:protoshop/models/category_item_model.dart';
 import 'package:protoshop/presentation/components/base_page.dart';
 import 'package:protoshop/presentation/components/input_field.dart';
 import 'package:protoshop/presentation/components/navbar.dart';
@@ -58,43 +59,55 @@ Widget body() {
     gridDelegate:
         const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
     children: [
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
-      productContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
+      categoryContainer(),
     ],
   );
 }
 
-Widget productContainer() {
+Widget categoryContainer() {
+  final categories = [
+    CategoryItemModel(name: "Shirt", imageUrl: Images.shirt),
+    CategoryItemModel(name: "Shirt", imageUrl: Images.shirt),
+    CategoryItemModel(name: "Shirt", imageUrl: Images.shirt),
+    CategoryItemModel(name: "Shirt", imageUrl: Images.shirt),
+  ];
   return Container(
     margin: const EdgeInsets.only(bottom: 10),
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Flexible(
-            child: Container(
-                padding: const EdgeInsets.all(18),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(5),
-                  border: Border.all(
-                      width: 0.6, color: const Color.fromRGBO(0, 0, 0, 0.45)),
-                ),
-                child: Image.asset(Images.shirt))),
-        Center(
-            child: Text(
-          "Shirts",
-          style: categoryTextStyle,
-        ))
-      ],
-    ),
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: categories
+            .map((e) => Column(
+                  children: [
+                    Flexible(
+                        child: Container(
+                      padding: const EdgeInsets.all(18.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                        border: Border.all(
+                          width: 0.6,
+                          color: const Color.fromRGBO(0, 0, 0, 0.45),
+                        ),
+                      ),
+                      child: Image.asset(e.imageUrl),
+                    )),
+                    Center(
+                        child: Text(
+                      e.name,
+                      style: categoryTextStyle,
+                    ))
+                  ],
+                ))
+            .toList()),
   );
 }
